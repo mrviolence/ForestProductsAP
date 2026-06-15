@@ -62,7 +62,7 @@ const Nursery = () => {
           <h3 className="text-3xl font-montserrat font-bold mb-8 text-center">
             Why Choose Our Nursery?
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-4">
               <div className="text-3xl">✓</div>
               <div>

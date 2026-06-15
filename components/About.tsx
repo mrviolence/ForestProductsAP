@@ -81,13 +81,14 @@ const About = () => {
               </div>
             </div>
 
-            <motion.button
+            <motion.a
+              href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-earth-700 hover:bg-earth-900 text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors"
             >
               Learn More
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
 
@@ -97,7 +98,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-3 gap-8 mt-20 bg-forest-900 rounded-3xl p-12 text-white"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 bg-forest-900 rounded-3xl p-8 md:p-12 text-white"
         >
           <div className="text-center">
             <p className="text-5xl font-bold text-earth-600 mb-2">500+</p>
