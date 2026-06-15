@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/ForestProductsAP',
   images: {
     domains: ['images.unsplash.com', 'picsum.photos'],
-    unoptimized: false,
+    unoptimized: true,
   },
   swcMinify: true,
 };
