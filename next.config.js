@@ -3,7 +3,16 @@ const nextConfig = {
   output: 'export',
   basePath: '/ForestProductsAP',
   images: {
-    domains: ['images.unsplash.com', 'picsum.photos'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
     unoptimized: true,
   },
   swcMinify: true,
