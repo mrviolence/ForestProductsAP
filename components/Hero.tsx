@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
@@ -75,11 +76,15 @@ const Hero = () => {
           className="hidden md:block md:w-1/2 relative h-full"
         >
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-forest-900"></div>
-          <div className="w-full h-full bg-gradient-to-br from-earth-700 to-forest-900 rounded-3xl flex items-center justify-center overflow-hidden">
-            <div className="text-center text-cream opacity-50">
-              <div className="text-6xl mb-4">🌲</div>
-              <p>Forest Image</p>
-            </div>
+          <div className="w-full h-[500px] overflow-hidden rounded-3xl relative shadow-2xl border-4 border-earth-700/20">
+            <Image
+              src="/images/hero_forest.png"
+              alt="Premium Sustainable Forest"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest-900/60 via-transparent to-transparent"></div>
           </div>
         </motion.div>
       </div>

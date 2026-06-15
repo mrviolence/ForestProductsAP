@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -26,9 +27,14 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-forest-900 to-earth-700 rounded-3xl h-96 flex items-center justify-center text-cream text-6xl"
+            className="w-full h-96 overflow-hidden rounded-3xl relative shadow-xl border-4 border-earth-700/10"
           >
-            🌍
+            <Image
+              src="/images/about_forest.png"
+              alt="Sustainable Tree Seedlings"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+            />
           </motion.div>
 
           {/* Right - Content */}

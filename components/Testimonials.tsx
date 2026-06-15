@@ -66,7 +66,7 @@ const Testimonials = () => {
 
               {/* Quote */}
               <p className="text-cream italic mb-6 text-lg">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Author */}

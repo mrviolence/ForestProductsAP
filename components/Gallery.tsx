@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const galleryImages = [
@@ -35,12 +36,14 @@ const Gallery = () => {
             <motion.div
               whileHover={{ scale: 1.04 }}
               key={idx}
-              className="overflow-hidden rounded-2xl border-2 border-forest-900/10 shadow"
+              className="overflow-hidden rounded-2xl border-2 border-forest-900/10 shadow relative h-72"
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-72 object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
+              />
             </motion.div>
           ))}
         </div>
