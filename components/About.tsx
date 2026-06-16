@@ -85,7 +85,7 @@ const About = () => {
               href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-earth-700 hover:bg-earth-900 text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors"
+              className="inline-block bg-earth-700 hover:bg-earth-900 text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors"
             >
               Learn More
             </motion.a>

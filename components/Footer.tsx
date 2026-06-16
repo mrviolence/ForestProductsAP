@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -165,12 +166,12 @@ const Footer = () => {
         >
           <p>&copy; {currentYear} Forest Supplies. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="/privacy-policy" className="hover:text-earth-600 transition-colors">
+            <Link href="/privacy-policy" className="hover:text-earth-600 transition-colors">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="hover:text-earth-600 transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-earth-600 transition-colors">
               Terms of Service
-            </a>
+            </Link>
             <a href="#home" className="hover:text-earth-600 transition-colors">
               Sitemap
             </a>

@@ -55,7 +55,7 @@ const Hero = () => {
               href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-earth-700 hover:bg-earth-900 text-white px-8 py-3 rounded-lg font-poppins font-semibold text-lg transition-colors"
+              className="inline-block text-center bg-earth-700 hover:bg-earth-900 text-white px-8 py-3 rounded-lg font-poppins font-semibold text-lg transition-colors"
             >
               View Products
             </motion.a>
@@ -63,7 +63,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-earth-700 text-earth-700 hover:bg-earth-700 hover:text-white px-8 py-3 rounded-lg font-poppins font-semibold text-lg transition-all"
+              className="inline-block text-center border-2 border-earth-700 text-earth-700 hover:bg-earth-700 hover:text-white px-8 py-3 rounded-lg font-poppins font-semibold text-lg transition-all"
             >
               Contact Us
             </motion.a>
