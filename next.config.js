@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-// basePath is ONLY needed on GitHub Pages (where the repo name is the URL prefix).
-// When building locally (npm run build + npm start), no basePath is needed.
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
-
+// With the custom domain forestfutures.net, GitHub Pages serves the site at
+// the domain root — no basePath prefix is needed.
 const nextConfig = {
   // Always export a static /out folder so `npm start` (npx serve out) works.
   output: 'export',
-
-  // Only prefix asset URLs with /ForestProductsAP on the real GitHub Pages deployment.
-  ...(isGitHubPages && { basePath: '/ForestProductsAP' }),
 
   images: {
     remotePatterns: [
