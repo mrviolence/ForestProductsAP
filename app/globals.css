@@ -64,3 +64,17 @@ img {
   height: auto;
   display: block;
 }
+
+:focus-visible {
+  outline: 2px solid #6B4F2A;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #6B4F2A;
+  border-color: #6B4F2A !important;
+}

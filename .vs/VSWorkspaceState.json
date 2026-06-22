@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.next",
+    "\\.next\\server",
+    "\\.next\\server\\pages",
+    "\\app",
+    "\\out"
+  ],
+  "SelectedNode": "\\.next\\server\\pages\\_app.js",
+  "PreviewInSolutionExplorer": false
+}

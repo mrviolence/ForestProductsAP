@@ -12,6 +12,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,9 +24,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
@@ -60,7 +62,7 @@ const Contact = () => {
               <Phone size={24} className="text-white" />
             </div>
             <h3 className="text-xl font-bold text-forest-900 mb-2">Phone</h3>
-            <p className="text-gray-600">+254 712 345 678</p>
+            <a href="tel:+254712345678" className="text-gray-600 hover:text-earth-700 transition-colors">+254 712 345 678</a>
           </motion.div>
 
           <motion.div
@@ -74,7 +76,7 @@ const Contact = () => {
               <Mail size={24} className="text-white" />
             </div>
             <h3 className="text-xl font-bold text-forest-900 mb-2">Email</h3>
-            <p className="text-gray-600">info@forestsupplies.com</p>
+            <a href="mailto:info@forestsupplies.com" className="text-gray-600 hover:text-earth-700 transition-colors">info@forestsupplies.com</a>
           </motion.div>
 
           <motion.div
@@ -98,8 +100,18 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-cream to-white rounded-3xl p-12 border border-forest-900/10 max-w-2xl mx-auto"
+          className="bg-gradient-to-br from-cream to-white rounded-3xl p-6 md:p-12 border border-forest-900/10 max-w-2xl mx-auto"
         >
+          {submitted && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6 bg-forest-700 text-white rounded-xl px-6 py-4 flex items-center gap-3 font-poppins"
+            >
+              <span className="text-2xl">✓</span>
+              <span>Message sent successfully! We&apos;ll get back to you shortly.</span>
+            </motion.div>
+          )}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>

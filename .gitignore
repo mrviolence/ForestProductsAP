@@ -31,3 +31,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# .NET / Visual Studio publish output (do NOT commit these)
+/wwwroot
+*.exe
+*.dll
+*.pdb
+*.runtimeconfig.json
+*.deps.json
+*.publish.xml
+publish/

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
     <footer className="bg-forest-900 text-cream pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,31 +102,43 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h4 className="font-montserrat font-bold text-white mb-4">Follow Us</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="#"
+                href="https://facebook.com/forestsupplies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
                 className="w-10 h-10 bg-earth-700 rounded-lg flex items-center justify-center hover:bg-earth-600 transition-colors"
               >
                 <Facebook size={20} />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="#"
+                href="https://twitter.com/forestsupplies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Twitter"
                 className="w-10 h-10 bg-earth-700 rounded-lg flex items-center justify-center hover:bg-earth-600 transition-colors"
               >
                 <Twitter size={20} />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="#"
+                href="https://instagram.com/forestsupplies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
                 className="w-10 h-10 bg-earth-700 rounded-lg flex items-center justify-center hover:bg-earth-600 transition-colors"
               >
                 <Instagram size={20} />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="#"
+                href="https://linkedin.com/company/forestsupplies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect on LinkedIn"
                 className="w-10 h-10 bg-earth-700 rounded-lg flex items-center justify-center hover:bg-earth-600 transition-colors"
               >
                 <Linkedin size={20} />
@@ -153,13 +166,13 @@ const Footer = () => {
         >
           <p>&copy; {currentYear} Forest Supplies. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-earth-600 transition-colors">
+            <Link href="/privacy-policy" className="hover:text-earth-600 transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-earth-600 transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-earth-600 transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-earth-600 transition-colors">
+            </Link>
+            <a href="#home" className="hover:text-earth-600 transition-colors">
               Sitemap
             </a>
           </div>
